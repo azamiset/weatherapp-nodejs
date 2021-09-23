@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Aplikasi Prakiraan Cuaca Node Js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azamiset/weatherapp-nodejs.git"
+  },
+  "keywords": [
+    "WeatherApp"
+  ],
+  "author": "Wandy Azami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azamiset/weatherapp-nodejs/issues"
+  },
+  "homepage": "https://github.com/azamiset/weatherapp-nodejs#readme"
+}
