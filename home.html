@@ -128,7 +128,7 @@
 
     .fa-street-view {
       animation: rotates 3s linear infinite alternate;
-      color: #fff;
+      color: #eccc68;
     }
 
     @keyframes rotates {
@@ -209,11 +209,11 @@
 
     <div class="info">
       <h2 class="location">
-        <i class="fas fa-street-view"></i>Sukabumi, ID
+        <i class="fas fa-street-view"></i>{%location%}, {%country%}
       </h2>
       <p id="date">WED | OCT 23 | 10:49AM</p>
-      <h1 class="temp">26.49 &#x2103;</h1>
-      <h3 class="tempmin_max">Min 26.49 &#x2103; | Max 26.49 &#x2103;</h3>
+      <h1 class="temp">{%tempval%} &#x2103;</h1>
+      <h3 class="tempmin_max">Min {%tempmin%} &#x2103; | Max {%tempmax%} &#x2103;</h3>
     </div>
   </div>
 
@@ -222,7 +222,16 @@
     const curDate = document.getElementById("date");
     let weathercon = document.getElementById("weathercon");
 
-    const tempStatus = "Clouds";
+    const tempStatus = "{%tempstatus%}";
+    if (tempStatus === 'Sunny') {
+      weathercon.innerHTML = `<i class="fas fa-sun style="color: #eccc68"></i>`;
+    } else if (tempStatus === 'Clouds') {
+      weathercon.innerHTML = `<i class="fas fa-sun style="color: #f1f2f6"></i>`;
+    } else if (tempStatus === 'Rainy') {
+      weathercon.innerHTML = `<i class="fas fa-sun style="color: #a4b0be"></i>`;
+    } else {
+      weathercon.innerHTML = `<i class="fas fa-sun style="color: #44c3de"></i>`;
+    }
 
     const getCurrentDay = () => {
       var weekday = new Array(7);
